@@ -1,0 +1,5 @@
+python manage.py create_categories_revenu
+python manage.py create_categories
+python manage.py create_comptes
+python manage.py load_devises
+

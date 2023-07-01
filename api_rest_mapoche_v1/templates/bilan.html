@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bilan</title>
+</head>
+<body>
+    <h1>Bilan</h1>
+    
+    <form method="get" action="">
+        <label for="annee">Année :</label>
+        <input type="number" name="annee" id="annee" value="{{ annee }}">
+        
+        <label for="mois">Mois :</label>
+        <input type="number" name="mois" id="mois" min="1" max="12" value="{{ mois }}">
+        
+        <label for="date">Date :</label>
+        <input type="date" name="date" id="date" value="{{ date }}">
+        
+        <input type="submit" value="Afficher">
+    </form>
+    
+    <h2>Bilan par année</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Année</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in bilan_par_annee %}
+            <tr>
+                <td>{{ item.year }}</td>
+                <td>{{ item.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <h2>Bilan par mois</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Mois</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in bilan_par_mois %}
+            <tr>
+                <td>{{ item.month|date:"F Y" }}</td>
+                <td>{{ item.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <h2>Bilan par jour</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Jour</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in bilan_par_jour %}
+            <tr>
+                <td>{{ item.day }}</td>
+                <td>{{ item.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

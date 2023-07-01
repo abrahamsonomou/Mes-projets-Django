@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bilan par mois</title>
+</head>
+<body>
+    <h1>Bilan par mois</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Mois</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in bilan_par_mois %}
+            <tr>
+                <td>{{ item.month|date:"F Y" }}</td>
+                <td>{{ item.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

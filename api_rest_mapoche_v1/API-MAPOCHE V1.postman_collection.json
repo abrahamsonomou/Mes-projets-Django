@@ -1,0 +1,923 @@
+{
+	"info": {
+		"_postman_id": "fa98fc5b-edd3-4b33-a066-f068f83be7d3",
+		"name": "API-MAPOCHE V1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "users-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/users/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"username\": \"admin0\",\r\n        \"email\": \"admin0@gmail.com\",\r\n        \"password\": \"123125\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/users/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-users",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin0\",\r\n    \"email\": \"admin0@gmail.com\",\r\n    \"password\": \"123125\",\r\n    \"is_staff\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/users/3/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-users",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/users/3/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Compte",
+			"item": [
+				{
+					"name": "list-compte",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/comptes/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"comptes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-compte",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"compte2\",\r\n    \"solde\":10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/comptes/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"comptes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-compte",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/comptes/5/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"comptes",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories-depense",
+			"item": [
+				{
+					"name": "liste-categories-depense",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/categories-depense",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"categories-depense"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-categories-depense",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"nom\": \"Achat de savon\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/categories-depense/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"categories-depense",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-categories-depense",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"Achat de riz la riziere\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/categories-depense/1/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"categories-depense",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-categories-depense",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/categories-depense/2/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"categories-depense",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories-categories-revenus",
+			"item": [
+				{
+					"name": "liste-categories-revenus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/categories-revenus",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"categories-revenus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-categories-revenus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"nom\": \"Achat de savon\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/categories-revenus/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"categories-revenus",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-categories-revenus",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"Achat de riz la riziere\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/categories-revenus/1/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"categories-revenus",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-categories-revenus",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/categories-revenus/2/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"categories-revenus",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "devises",
+			"item": [
+				{
+					"name": "liste-devises",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/devises",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"devises"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-devises",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"nom\": \"Achat de savon\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/devises/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"devises",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-devises",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"Achat de riz la riziere\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/devises/1/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"devises",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-devises",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/devises/2/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"devises",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "parametres",
+			"item": [
+				{
+					"name": "liste-parametres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/parametres",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"parametres"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-parametres",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"nom\": \"Achat de savon\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/parametres/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"parametres",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-parametres",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"Achat de riz la riziere\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/parametres/1/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"parametres",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-parametres",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/parametres/2/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"parametres",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "revenus",
+			"item": [
+				{
+					"name": "list-revenus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/revenus",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"revenus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-revenus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"nom\": \"Achat de conduiment\",\r\n            \"date\": \"2023-06-20\",\r\n            \"montant\": \"-2\",\r\n            \"periodicite\": \"H\",\r\n            \"compte\": 2\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/revenus/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"revenus",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-revenus",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"Achat de savon de toilette\",\r\n    \"date\": \"2023-06-20\",\r\n    \"montant\": \"12000.00\",\r\n    \"periodicite\": \"H\",\r\n    \"compte\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/revenus/1/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"revenus",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-revenus",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/revenus/1/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"revenus",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "depenses",
+			"item": [
+				{
+					"name": "list-depenses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/depenses",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"depenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-depenses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"nom\": \"Achat de moto\",\r\n            \"date\": \"2023-06-29\",\r\n            \"montant\": \"15000.00\",\r\n            \"periodicite\": \"M\",\r\n            \"compte\": 3,\r\n            \"categorie\": 1\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/depenses/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"depenses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-depenses",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"Achat de riz en carton\",\r\n    \"date\": \"2023-06-29\",\r\n    \"montant\": \"2540.00\",\r\n    \"periodicite\": \"M\",\r\n    \"compte\": 3,\r\n    \"categorie\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/depenses/1/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"depenses",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-depenses",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/depenses/2/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"depenses",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transactions",
+			"item": [
+				{
+					"name": "list-transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/transactions",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-transactions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"type_transaction\": \"R\",\r\n            \"nom\": \"Achat de savon de toilette\",\r\n            \"date\": \"2023-06-28\",\r\n            \"montant\": \"1700.00\",\r\n            \"compte\": 2\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/transactions/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-transactions",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type_transaction\": \"D\",\r\n    \"nom\": \"Achat de savon de toilette\",\r\n    \"date\": \"2023-06-28\",\r\n    \"montant\": \"1700.00\",\r\n    \"compte\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host1}}/api/transactions/2/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-transactions",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/transactions/2/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bilan",
+			"item": [
+				{
+					"name": "bilan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/api/",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"api",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
